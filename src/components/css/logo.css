@@ -1,0 +1,10 @@
+#pp-card{
+    border-style: solid;
+    border-color:#0d47a1;
+    border-radius: 25px;
+    margin: 5%;
+    box-shadow: 2.5px 4px #888888;
+}
+.font{
+    font-size: 15px;
+}

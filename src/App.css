@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+div {
+  font-family: 'Kanit', sans-serif;
+}
+
+#main-container {
+  display: flex;
+  flex : 1;
+}

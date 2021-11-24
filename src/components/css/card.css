@@ -1,0 +1,21 @@
+#p-card {
+    margin: 10px;
+    width: 300px;
+}
+#univ {
+text-align: center;
+font-size: 18px;
+}
+#name {
+text-align: center;
+font-size: 18px;
+}
+#del-btn {
+    /* margin-top: 10px; */
+    text-align: center;
+}
+
+#name-tag {
+    text-align: center;
+    margin-bottom: 10%;
+}

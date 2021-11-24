@@ -1,0 +1,23 @@
+.input-form {
+    padding: 2%;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: #88888825;
+    box-shadow: 2.5px 4px #888888;
+}
+.outer-form {
+    padding: 1%;
+    /* border-style: solid; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#button-col {
+    text-align: center;
+}
+Button {
+    width: 100px;
+}
+#head {
+    font-size: 36px;
+}

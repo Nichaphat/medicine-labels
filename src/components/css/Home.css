@@ -1,0 +1,29 @@
+.list-view-container {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.outer-border {
+    border-style: solid;
+    border-color:#0d47a1;
+    border-radius: 25px;
+    margin: 5%;
+    box-shadow: 2.5px 4px #888888;
+}
+
+#head {
+    text-align: center;
+    margin-top: 1%;
+}
+#anouce {
+    text-align: center;
+    font-size: 24px;
+}
+
+.search-out{
+    text-align: right;
+}
+
+.type{
+    text-align: center;
+}

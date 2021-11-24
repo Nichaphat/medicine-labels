@@ -1,0 +1,36 @@
+
+.Form {
+    display: flex;
+    border-style: solid;
+    border-color: white;
+    justify-content: center;
+}
+
+.Form-input {
+    padding: 5%;
+    border-style: solid;
+    border-radius: 25px;
+    
+}
+Button {
+    width: 100px;
+    
+}
+.btn-box {
+    display: inline;
+    text-align: center;
+}
+.banner {
+    background-color: #003c8f;
+    color: white
+}
+#head {
+    text-align: center;
+}
+#banner-text {
+    padding: 20px;
+    font-size: 36px;
+}
+#sign {
+    text-align: center;
+}
