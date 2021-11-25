@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.0.3",
     "axios": "^0.19.2",
-    "firebase": "^9.5.0",
+    "firebase": "9.5.0",
     "qrcode.react": "^1.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

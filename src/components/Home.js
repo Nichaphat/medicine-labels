@@ -46,7 +46,7 @@ const Home = (props) => {
   if (Medicine.length === 0) {
     return (
       <div id="anouce">
-        <p>You never added a Medicine list</p>
+        <p>No Medicine Information</p>
       </div>
     )
   }

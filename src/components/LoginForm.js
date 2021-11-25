@@ -23,7 +23,7 @@ const LoginForm = (props) => {
       })
       .catch((err) => {
         console.log(err);
-        message.error("invalid username or password please try again")
+        message.error("Invalid username or password please try again")
       });
     setLoading(false);
   };

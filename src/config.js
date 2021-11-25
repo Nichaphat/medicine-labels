@@ -17,3 +17,7 @@ firebase.firestore()
 export const auth = firebase.auth()
 
 export default config;
+
+
+
+

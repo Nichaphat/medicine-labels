@@ -4,7 +4,7 @@ import TopBar from "./TopBar";
 import EditForm from "./EditForm";
 import Home from "./Home";
 import MedicineForm from "./MedicineForm";
-import Medicinelables from "./Medicinelables";
+import Medicinelables from "./Medicinelables"
 
 const SiteRender = () => {
 
