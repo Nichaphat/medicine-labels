@@ -1,10 +1,11 @@
-import firebase from "firebase/compat";
-import 'firebase/compat/firestore';
+import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const config = {
   apiKey: "AIzaSyB2KY6z_Mqt4MtVAIMiKE6lmFJPi7bDXdQ",
   authDomain: "fir-webapp-f3b87.firebaseapp.com",
+  databaseURL: "https://fir-webapp-f3b87-default-rtdb.firebaseio.com",
   projectId: "fir-webapp-f3b87",
   storageBucket: "fir-webapp-f3b87.appspot.com",
   messagingSenderId: "123808458294",

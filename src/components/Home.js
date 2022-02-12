@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import MedicineCard from "./MedicineCard";
 import { firestore } from "../index";
 import "./css/Home.css";
-import { Divider, Tooltip, Button, Modal } from "antd";
+import { Divider, Button, Modal } from "antd";
 import MedicineForm from "./MedicineForm";
 
 const Home = (props) => {
@@ -46,6 +46,13 @@ const Home = (props) => {
   if (Medicine.length === 0) {
     return (
       <div id="anouce">
+        <Button
+        type="dashed"
+        onClick={showModal}
+        style={{ width: "20%", height: "30px" }}
+      >
+        Add New Medicine Information
+      </Button><br/><br/>
         <p>No Medicine Information</p>
       </div>
     )

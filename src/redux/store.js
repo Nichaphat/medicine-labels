@@ -1,4 +1,5 @@
 import { createStore, combineReducers } from "redux";
+
 const initialForm = {
   name: "",
   code_medicine: "",
@@ -8,6 +9,7 @@ const initialForm = {
   item3: "",
   item4: ""
 };
+
 const formReducer = (data = initialForm, action) => {
   switch (action.type) {
     case "CHANGE_NAME":
