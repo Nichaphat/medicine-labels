@@ -11,7 +11,7 @@ const MedicineForm = () => {
   const reset = () => {
     window.location.reload()
   }
-  const addMedicine = () => {
+  const addMedicine = async() => {
     dispatch({
       type: "ADD_MEDICINE",
       Medicine: {
@@ -19,7 +19,7 @@ const MedicineForm = () => {
         id: Medicine.length > 0 ? Medicine[Medicine.length - 1].id + 1 : 0,
       },
     });
-    firestore
+    await firestore
       .collection("Medicine")
       .doc()
       .set({ ...form });
@@ -117,7 +117,7 @@ const MedicineForm = () => {
               />
         </p>
         <p id="button-col">
-          <Button type="primary" onClick={() => addMedicine()} a href="/">
+          <Button type="primary" onClick={() => addMedicine()} >
             Add
           </Button>
           {" "}

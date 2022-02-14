@@ -13,15 +13,17 @@ const EditForm = (props) => {
       description: "Your data has been updated.",
     });
   };
-  const updateData = () => {
-    firestore
+ 
+  const updateData = async() => {
+    await firestore
       .collection("Medicine")
       .doc(props.match.params.Medicine_id)
       .set(form);
     popupNotification("success");
   };
-  const fetchData = () => {
-    firestore
+ 
+  const fetchData = async() => {
+     await firestore
       .collection("Medicine")
       .doc(props.match.params.Medicine_id)
       .get()

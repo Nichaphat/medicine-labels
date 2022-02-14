@@ -11,8 +11,9 @@ const MedicineCard = (props) => {
   const dispatch = useDispatch();
   const deleteMedicine = (id) => {
     firestore.collection("Medicine").doc(props.id).delete();
-    dispatch({ type: "DELETE_Medicine", id: props.id });
+    dispatch({ type: "DELETE_MEDCINE", id: props.id });
   };
+
   return (
     <Card id="p-card" title={code_medicine + " "}>
       <p id="name">
