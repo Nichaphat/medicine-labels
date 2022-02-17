@@ -9,9 +9,9 @@ import { withRouter } from "react-router-dom";
 const MedicineCard = (props) => {
   const { name, code_medicine, item, item1, item2, item3, item4 } = props;
   const dispatch = useDispatch();
-  const deleteMedicine = (id) => {
-    firestore.collection("Medicine").doc(props.id).delete();
-    dispatch({ type: "DELETE_MEDCINE", id: props.id });
+  const deleteMedicine = async(id) => {
+    await firestore.collection("Medicine").doc(props.id).delete();
+    dispatch({ type: "DELETE_MEDICINE", id: props.id });
   };
 
   return (

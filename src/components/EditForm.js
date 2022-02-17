@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Input, Row, Col, Divider, Button, notification } from "antd";
+import { Input, Row, Col, Divider, Button, notification, Select } from "antd";
 import "./css/Form.css";
 import { useDispatch, useSelector } from "react-redux";
 import { firestore } from "../index";
@@ -14,16 +14,16 @@ const EditForm = (props) => {
     });
   };
  
-  const updateData = async() => {
-    await firestore
+  const updateData = () => {
+     firestore
       .collection("Medicine")
       .doc(props.match.params.Medicine_id)
       .set(form);
     popupNotification("success");
   };
  
-  const fetchData = async() => {
-     await firestore
+  const fetchData = () => {
+     firestore
       .collection("Medicine")
       .doc(props.match.params.Medicine_id)
       .get()
@@ -64,6 +64,7 @@ const EditForm = (props) => {
     fetchData()
     // eslint-disable-next-line
   }, []);
+  const { Option } = Select;
 
   return (
     <div className="outer-form">
@@ -103,64 +104,71 @@ const EditForm = (props) => {
           <Divider orientation="left">รายละเอียดการรับประทานยา</Divider>
         </p>
         <p>
-              <Input
-                value={form.item}
-                placeholder="รับประทานครั้งละกี่เม็ด"
-                onChange={(e) =>
-                  dispatch({
-                    type: "CHANGE_ITEM",
-                    item: e.target.value,
-                  })
-                }
-              />
+          <Select  style={{ width: '100%' }} defaultValue="รับประทานครั้งละกี่เม็ด"
+            onChange={(e) =>
+              dispatch({
+                type: "CHANGE_ITEM",
+                item: e,
+              })
+            }>
+            <Option value="ครึ่งเม็ด">รับประทานครั้งละ ครึ่งเม็ด</Option>
+            <Option value="1 เม็ด">รับประทานครั้งละ 1 เม็ด</Option>
+            <Option value="2 เม็ด">รับประทานครั้งละ 2 เม็ด</Option>
+            <Option value="3 เม็ด">รับประทานครั้งละ 3 เม็ด</Option>
+          </Select>
         </p>
         <p>
-        <Input
-                value={form.item1}
-                placeholder="วันละกี่ครั้ง"
-                onChange={(e) =>
-                  dispatch({
-                    type: "CHANGE_ITEM1",
-                    item1: e.target.value,
-                  })
-                }
-              />
+           <Select style={{ width: '100%' }} defaultValue="วันละกี่ครั้ง"
+            onChange={(e) =>
+              dispatch({
+                type: "CHANGE_ITEM1",
+                item: e,
+              })
+            }>
+            <Option value="1 ครั้ง">วันละ 1 ครั้ง</Option>
+            <Option value="2 ครั้ง">วันละ 2 ครั้ง</Option>
+            <Option value="3 ครั้ง">วันละ 3 ครั้ง</Option>
+            <Option value="4 ครั้ง">วันละ 4 ครั้ง</Option>
+          </Select>
         </p>
         <p>
-              <Input
-                value={form.item2}
-                placeholder="ก่อนอาหาร / หลังอาหาร / ก่อนนอน"
-                onChange={(e) =>
-                  dispatch({
-                    type: "CHANGE_ITEM2",
-                    item2: e.target.value,
-                  })
-                }
-              />
+            <Select style={{ width: '100%' }} defaultValue="ก่อนอาหาร / หลังอาหาร / ก่อนนอน"
+            onChange={(e) =>
+              dispatch({
+                type: "CHANGE_ITEM2",
+                item: e,
+              })
+            }>
+            <Option value="ก่อนอาหาร">ก่อนอาหาร</Option>
+            <Option value="หลังอาหาร">หลังอาหาร</Option>
+            <Option value="ก่อนนอน">ก่อนนอน</Option>
+          </Select>
         </p>
         <p>
-              <Input
-                value={form.item3}
-                placeholder="เช้า / เที่ยง / เย็น / ก่อนนอน"
-                onChange={(e) =>
-                  dispatch({
-                    type: "CHANGE_ITEM3",
-                    item3: e.target.value,
-                  })
-                }
-              />
+           <Select style={{ width: '100%' }} defaultValue="เช้า / เที่ยง / เย็น / ก่อนนอน"
+            onChange={(e) =>
+              dispatch({
+                type: "CHANGE_ITEM3",
+                item: e,
+              })
+            }>
+            <Option value="เช้า">เช้า</Option>
+            <Option value="เย็น">เย็น</Option>
+            <Option value="เช้า เย็น">เช้า-เย็น</Option>
+            <Option value="เช้า เที่ยง เย็น">เช้า เที่ยง เย็น</Option>
+            <Option value="ก่อนนอน">ก่อนนอน</Option>
+          </Select>
         </p>
         <p>
-              <Input
-                value={form.item4}
-                placeholder="อื่นๆ"
-                onChange={(e) =>
-                  dispatch({
-                    type: "CHANGE_ITEM4",
-                    item4: e.target.value,
-                  })
-                }
-              />
+          <Input
+            placeholder="อื่นๆ"
+            onChange={(e) =>
+              dispatch({
+                type: "CHANGE_ITEM4",
+                item4: e.target.value,
+              })
+            }
+          />
         </p>
         <p id="button-col">
           <Button type="primary" onClick={() => updateData()}>
