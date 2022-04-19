@@ -67,7 +67,7 @@ const MedicineForm = () => {
             onChange={(e) =>
               dispatch({
                 type: "CHANGE_ITEM",
-                item: e,
+                item: e,   
               })
             }>
             <Option value="ครึ่งเม็ด">รับประทานครั้งละ ครึ่งเม็ด</Option>
@@ -81,7 +81,7 @@ const MedicineForm = () => {
             onChange={(e) =>
               dispatch({
                 type: "CHANGE_ITEM1",
-                item: e,
+                item1: e,
               })
             }>
             <Option value="1 ครั้ง">วันละ 1 ครั้ง</Option>
@@ -95,7 +95,7 @@ const MedicineForm = () => {
             onChange={(e) =>
               dispatch({
                 type: "CHANGE_ITEM2",
-                item: e,
+                item2: e,
               })
             }>
             <Option value="ก่อนอาหาร">ก่อนอาหาร</Option>
@@ -108,7 +108,7 @@ const MedicineForm = () => {
             onChange={(e) =>
               dispatch({
                 type: "CHANGE_ITEM3",
-                item: e,
+                item3: e,
               })
             }>
             <Option value="เช้า">เช้า</Option>

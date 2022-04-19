@@ -14,8 +14,8 @@ const EditForm = (props) => {
     });
   };
  
-  const updateData = () => {
-     firestore
+  const updateData = async () => {
+    await firestore
       .collection("Medicine")
       .doc(props.match.params.Medicine_id)
       .set(form);
@@ -28,35 +28,35 @@ const EditForm = (props) => {
       .doc(props.match.params.Medicine_id)
       .get()
       .then((medicine) => {
-        dispatch({
-          type: "CHANGE_NAME",
-          name: medicine.data().name,
-        });
-        dispatch({
-          type: "CHANGE_CODE_MEDICINE",
-          code_medicine: medicine.data().code_medicine,
-        });
-        dispatch({
-          type: "CHANGE_ITEM",
-          item: medicine.data().item,
-        });
-        dispatch({
-          type: "CHANGE_ITEM1",
-          item1: medicine.data().item1,
-        });
-        dispatch({
-          type: "CHANGE_ITEM2",
-          item2: medicine.data().item2,
-        });
-        dispatch({
-          type: "CHANGE_ITEM3",
-          item3: medicine.data().item3,
-        });
+        // dispatch({
+        //   type: "CHANGE_NAME",
+        //   name: medicine.data().name,
+        // });
+        // dispatch({
+        //   type: "CHANGE_CODE_MEDICINE",
+        //   code_medicine: medicine.data().code_medicine,
+        // });
+        // dispatch({
+        //   type: "CHANGE_ITEM",
+        //   item: medicine.data().item,
+        // });
+        // dispatch({
+        //   type: "CHANGE_ITEM1",
+        //   item1: medicine.data().item1,
+        // });
+        // dispatch({
+        //   type: "CHANGE_ITEM2",
+        //   item2: medicine.data().item2,
+        // });
+        // dispatch({
+        //   type: "CHANGE_ITEM3",
+        //   item3: medicine.data().item3,
+        // });
 
-        dispatch({
-          type: "CHANGE_ITEM4",
-          item4: medicine.data().address.item4,
-        });
+        // dispatch({
+        //   type: "CHANGE_ITEM4",
+        //   item4: medicine.data().item4,
+        // });
       });
   }
   
@@ -122,7 +122,7 @@ const EditForm = (props) => {
             onChange={(e) =>
               dispatch({
                 type: "CHANGE_ITEM1",
-                item: e,
+                item1: e,
               })
             }>
             <Option value="1 ครั้ง">วันละ 1 ครั้ง</Option>
@@ -136,7 +136,7 @@ const EditForm = (props) => {
             onChange={(e) =>
               dispatch({
                 type: "CHANGE_ITEM2",
-                item: e,
+                item2: e,
               })
             }>
             <Option value="ก่อนอาหาร">ก่อนอาหาร</Option>
@@ -149,7 +149,7 @@ const EditForm = (props) => {
             onChange={(e) =>
               dispatch({
                 type: "CHANGE_ITEM3",
-                item: e,
+                item3: e,
               })
             }>
             <Option value="เช้า">เช้า</Option>

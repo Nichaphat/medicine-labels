@@ -12,9 +12,11 @@ const Medicinelables = (props) => {
   return (
     <Card id="pp-card" style={{ width: 500}}>
       <div className="font">
-      <Divider orientation="left">พาราเซตามอล 500 มิลลิกรัม</Divider>
-      <div>รับประทานครั้งละ 1-2 เม็ด </div>
-      <div>ห่างกันอย่างน้อย 6 ชม. เวลาปวดหรือมีไข้</div>
+      <Divider orientation="left">โฟลิค แอซิด 5 มิลลิกรัม
+</Divider>
+      <div>รับประทานครั้งละ 1 เม็ด </div>
+      <div>วันละ 1 ครั้ง หลังอาหาร เช้า</div>
+      <div>ยาบำรุงเลือด</div>
       <Divider orientation="right"> <QRCode /> </Divider>
       </div>
     </Card>

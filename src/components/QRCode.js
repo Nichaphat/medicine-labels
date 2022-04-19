@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 
 class qrcode extends Component {
     state = {
-        value: 'พาราเซตามอล 500 มิลลิกรัม รับประทานครั้งละ 1-2 เม็ด ห่างกันอย่างน้อย 6 ชม. เวลาปวดหรือมีไข้'
+        value: 'แก้ปวด ลดไข้ รับประทานครั้งละ 2 เม็ด วันละ 1 ครั้ง หลังอาหาร เช้า'
     }
     
     render() {
